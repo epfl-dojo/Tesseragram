@@ -8,6 +8,7 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
+  console.log("Running");
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -49,6 +50,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+
+    .state('tab.photo', {
+      url: '/photo',
+      views: {
+        'tab-photo': {
+          templateUrl: 'templates/tab-photo.html',
+          controller: 'PhotoCtrl'
+        }
+      }
+    })
+    .state('tab.photo-detail', {
+      url: '/photo/:chatId',
+      views: {
+        'tab-photo': {
+          templateUrl: 'templates/photo-detail.html',
+          controller: 'PhotoDetailCtrl'
+        }
+      }
+    })
 
   .state('tab.chats', {
       url: '/chats',
