@@ -1,0 +1,3 @@
+[submodule "plugins/cordova-plugin-ocr"]
+	path = plugins/cordova-plugin-ocr
+	url = git@github.com:epfl-dojo/cordova-plugin-ocr.git
